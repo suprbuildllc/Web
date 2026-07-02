@@ -48,7 +48,7 @@ const getEnvPriceId = (key: string, defaultValue: string): string => {
 
 const getClientToken = (): string => {
   const token = getEnvVal('VITE_PADDLE_CLIENT_TOKEN', '') || getEnvVal('PADDLE_CLIENT_TOKEN', '');
-  return token || 'test_c79778520d249eaf9f87bdc52bb';
+  return token || 'test_7d279f61a3499fed520f7cd8c08';
 };
 
 // Map slug to product information & Paddle price IDs (using sandbox price IDs from documentation)

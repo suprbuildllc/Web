@@ -3,9 +3,10 @@ import { ArrowRight, MessageSquare, ChevronRight } from 'lucide-react';
 
 interface HeroProps {
   onOpenVoice: () => void;
+  onOpenChat: () => void;
 }
 
-export default function Hero({ onOpenVoice }: HeroProps) {
+export default function Hero({ onOpenVoice, onOpenChat }: HeroProps) {
   return (
     <section className="relative overflow-hidden border-b border-border py-20 md:py-28 transition-colors duration-200">
       {/* Visual background ambient gradient */}
@@ -64,6 +65,14 @@ export default function Hero({ onOpenVoice }: HeroProps) {
           >
             <MessageSquare className="w-4 h-4 text-primary" />
             Ask a question
+          </button>
+
+          <button
+            onClick={onOpenChat}
+            className="inline-flex items-center gap-2 font-medium text-[14px] bg-background border border-border text-foreground hover:bg-accent hover:border-ring active:translate-y-[1px] px-6 py-3 transition-all select-none"
+          >
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            Chat Assistant
           </button>
         </motion.div>
 
